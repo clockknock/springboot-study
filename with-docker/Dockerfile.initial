@@ -1,0 +1,8 @@
+# minimal image
+FROM openjdk:8-jdk-alpine
+# create a temporary file on your host under
+# "/var/lib/docker" and link it to the container under "/tmp".
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
