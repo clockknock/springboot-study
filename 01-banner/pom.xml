@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pri.zhong.springboot</groupId>
-	<artifactId>banner</artifactId>
+	<artifactId>01-banner</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>banner</name>
 	<description>try banner</description>
