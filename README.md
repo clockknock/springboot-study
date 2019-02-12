@@ -1,7 +1,4 @@
-# springboot-study
 
-跟着 [Reference Guide](https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/)
-查漏补缺的学习项目
 
 ### 1. 排除auto-configuration的类
 
@@ -127,7 +124,7 @@ public class MyBean {
 >
 > `$ java -jar myapp.jar --spring.application.json='{"name":"test"}'` 
 >
->  你也可以以 JNDI变量的方式提供JSON,例如:`java:comp/env/spring.application.json`.
+> 你也可以以 JNDI变量的方式提供JSON,例如:`java:comp/env/spring.application.json`.
 
 
 
@@ -136,6 +133,17 @@ public class MyBean {
 默认情况下, `SpringApplication`会将所有命令行参数转换为`property`并将它们添加到Spring `Environment`(也就是说以`—`开始的参数,例如`--server.port=9000`).如前面提到的,命令行参数会优先于任何其他property sources被应用.如果你不想命令行的properties被添加到`Environment`, 你可以通过`SpringApplication.setAddCommandLineProperties(false)`来禁用.
 
 
+
+### 8. 应用程序 Propety Files
+
+`SpringApplication`根据`application.properties`文件的位置来加载properties,优先级由高到低如下所示:
+
+1. 当前目录的的`/config`子目录
+2. 当前目录
+3. classpath的`/config`
+4. classpath根目录
+
+根据以上优先级, 优先级高的会覆盖掉优先级低的.
 
 
 

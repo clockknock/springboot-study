@@ -1,0 +1,13 @@
+acme:
+  remote-address: 192.168.1.1
+  enabled: true
+  security:
+    username: default
+    roles:
+    - DEFAULT
+    - DEFAULT
+
+#active属性用于指定使用哪一个配置文件,留空则为使用上面的默认值
+spring:
+  profiles:
+    active: production
