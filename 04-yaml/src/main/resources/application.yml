@@ -7,6 +7,10 @@ acme:
     - DEFAULT
     - DEFAULT
 
+app:
+  system:
+    sessionTimeout: 33
+
 #active属性用于指定使用哪一个配置文件,留空则为使用上面的默认值
 spring:
   profiles:
